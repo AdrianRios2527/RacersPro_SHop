@@ -1,3 +1,26 @@
+
+@media (max-width: 767px) {
+    body {
+      font-size: 14px;
+    }
+  }
+  
+ 
+  @media (min-width: 768px) and (max-width: 991px) {
+    body {
+      font-size: 16px;
+    }
+  }
+  
+ 
+  @media (min-width: 992px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+
+  
 a {
     text-decoration: none; 
     color: inherit;
