@@ -13,11 +13,11 @@ export const Cards = (props) => {
       Swal.fire({
         title: "Añadiremos su moto al carrito",
         icon: "success",
-        confirmButtonText: "¡Entendido!",
+     
         customClass: {
           title: "my-custom-title",
           content: "my-custom-content",
-          confirmButton: "my-custom-confirm-button",
+         
         },
       });
     } else {
@@ -25,11 +25,11 @@ export const Cards = (props) => {
       Swal.fire({
         title: "Compra cancelada",
         icon: "info",
-        confirmButtonText: "¡Entendido!",
+        
         customClass: {
           title: "my-custom-title",
           content: "my-custom-content",
-          confirmButton: "my-custom-confirm-button",
+        
         },
       });
     }
@@ -44,7 +44,7 @@ export const Cards = (props) => {
   };
 
   return (
-    <div className="card bg-black text-white my-4" style={{ maxWidth: "23rem", width: "100%" }}>
+    <div className="card card1 bg-black text-white my-4" style={{ maxWidth: "20rem", width: "100%" }}>
       <img
         className="card-img-top"
         style={{ width: "100%", height: "40%" }}
@@ -54,9 +54,12 @@ export const Cards = (props) => {
       <div className="card-body d-flex flex-column">
         <h5 className="card-title text-center mt-2">{props.tittle}</h5>
         <p className="card-text flex-grow-1 mt-2">{props.texts}</p>
-        <button className={buttonClass} onClick={handleButtonClick}>
-          {buttonText}
-        </button>
+        <div className="d-flex">
+          <button className={buttonClass} onClick={handleButtonClick}>
+            {buttonText} <br />{props.price}
+          </button>
+         
+        </div>
       </div>
     </div>
   );
