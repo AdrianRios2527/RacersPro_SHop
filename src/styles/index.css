@@ -51,11 +51,10 @@ a:hover {
     }
 }
 
-.fondo{
-    background: linear-gradient(to bottom right, rgb(59, 98, 0), yellow);
 
+
+body {
+  background: linear-gradient(to bottom right, rgb(105, 125, 75), rgb(27, 27, 25));
+ color: rgb(255, 254, 254);
+ font-family:Georgia, 'Times New Roman', Times, serif ;
 }
-
-
-
-

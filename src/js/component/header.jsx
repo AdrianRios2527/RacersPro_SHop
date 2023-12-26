@@ -16,8 +16,12 @@ export const Header = () => {
         <h1>RaceSPro</h1>
         <span>Ready to rock and roll!</span>
       </div>
+      <div className="text-center w-100">
+        <img className="d-none d-md-block img-fluid" src="https://kawa-go.kawasaki.es/storage/images/options/1-header-kawa-go-1920x355.jpg" alt="Banner cabecera"/>
+        <img className="d-md-none  img-fluid" src="https://kawa-go.kawasaki.es/storage/images/options/2-header-kawa-go-1920x355 (1).jpg" alt="Banner cabecera"/>
+      </div>
 
-      <div className="d-flex justify-content-between bg-dark p-3">
+      <div className="d-flex justify-content-around bg-dark p-3">
         <a
           href="#"
           className={`badge badge-info fs-6 borderAnimate ${activeTab === "motorbikes" && "active"}`}
@@ -32,13 +36,7 @@ export const Header = () => {
         >
           Helmet
         </a>
-        <a
-          href="#"
-          className={`badge badge-info fs-6 borderAnimate ${activeTab === "contact" && "active"}`}
-          onClick={() => handleTabClick("contact")}
-        >
-          Contact
-        </a>
+        
       </div>
 
       <div id="motorbikes" style={{ display: activeTab === "motorbikes" ? "block" : "none" }}>
@@ -48,10 +46,6 @@ export const Header = () => {
       <div id="helmet" style={{ display: activeTab === "helmet" ? "block" : "none" }}>
         {/* Contenido de Helmet */}
         <Helmet></Helmet>
-      </div>
-      <div id="contact" style={{ display: activeTab === "contact" ? "block" : "none" }}>
-        {/* Contenido de Contact */}
-        <p>Contenido de Contact</p>
       </div>
     </div>
   );

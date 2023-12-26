@@ -35,7 +35,7 @@ export const Cards = (props) => {
     }
 
     // Cambiar el texto del botón
-    setButtonText((prevText) => (prevText === "Buy" ? "Selected" : "Buy"));
+    setButtonText((prevText) => (prevText === "Buy" ? "Cancelar" : "Buy"));
 
     // Cambiar la clase del botón
     setButtonClass((prevClass) => (prevClass === "btn btn-success w-100" ? "btn btn-primary w-100" : "btn btn-success w-100"));

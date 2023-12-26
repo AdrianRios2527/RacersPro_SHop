@@ -3,14 +3,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { Cards } from "./cards";
 
 
 export const Container = () => {
-
   return (
     <div className="p-5">
-      <div className="d-flex justify-content-evenly p-5">
+      <div className="d-flex justify-content-around p-1">
         <a href="mailto:arrmarbella@gmail.com?Subject=I%20am%20interested%20on%20your%20service.">
           <FontAwesomeIcon
             icon={faEnvelope}
@@ -36,7 +34,17 @@ export const Container = () => {
           />
         </a>
       </div>
-      
+      <div className="d-flex justify-content-evenly p-5">
+          <a href="https://kawa-go.kawasaki.es/legal/contacto">Contacto</a>
+          <span class="mx-1">|</span>
+          <a href="https://kawa-go.kawasaki.es/legal/aviso-legal">Aviso legal</a>
+          <span class="mx-1">|</span>
+          <a href="https://kawa-go.kawasaki.es/legal/politica-privacidad">
+            KME Política de privacidad
+          </a>
+          <span class="mx-1">|</span>
+          <a href="https://kawa-go.kawasaki.es/legal/cookies">Aviso cookies</a>
+      </div>
     </div>
   );
 };

@@ -8,7 +8,7 @@ import { Container } from "./container";
 //create your first component
 const Home = () => {
 	return (
-		<div className="container-fluid fondo">
+		<div className="container-fluid  ">
 			<Header/>
 			<Container/>
 		</div>
