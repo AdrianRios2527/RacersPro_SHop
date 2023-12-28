@@ -6,6 +6,7 @@ export const Motorbikes = () => {
     return (
         <div className="d-flex flex-wrap justify-content-around" id="Motorbikes">
         <Cards
+          key="ninja"
           url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_Ninja_650_GN1_STU__2_.png "
           tittle="Ninja 400cc"
           price = "19.909$"
@@ -13,6 +14,7 @@ export const Motorbikes = () => {
         />
 
         <Cards
+          key="z900"
           url=" https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_Z900_RD1_STU__2_.png"
           tittle="Z900"
           price = "21.909$"

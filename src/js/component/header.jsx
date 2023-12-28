@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import MyModal from "./modal";
 
 export const Header = () => {
   const [activeTab, setActiveTab] = useState(null);
@@ -15,12 +16,20 @@ export const Header = () => {
 
   return (
     <div className="">
+
       <div className="p-3 text-center">
+
         <h1 id="tittleHeader">RaceSPro</h1>
         <span>Ready to rock and roll!</span>
-      </div>
-     
 
+      </div>
+
+      <div className="d-flex  justify-content-center p-2">
+
+        <MyModal/>
+
+      </div>
+  
       <div className="d-flex justify-content-around bg-dark p-3">
         <a
           href="#"
@@ -76,7 +85,7 @@ export const Header = () => {
               icon={faEnvelope}
               bounce
               size="2xl"
-              style={{ color: "#000000" }}
+              style={{ color: "#FFFFFF" }}
             />
           </a>
           <a href="https://www.youtube.com/@KAWASAKIESP">
@@ -84,7 +93,7 @@ export const Header = () => {
               icon={faYoutube}
               bounce
               size="2xl"
-              style={{ color: "#000000" }}
+              style={{ color:"#FFFFFF"}}
             />
           </a>
           <a href="https://www.instagram.com/racekawasaki?utm_source=ig_web_button_share_sheet&igsh=OGQ5ZDc2ODk2ZA==">
@@ -92,7 +101,7 @@ export const Header = () => {
               icon={faInstagram}
               bounce
               size="2xl"
-              style={{ color: "#000000" }}
+              style={{ color:"#FFFFFF" }}
             />
           </a>
         </div>

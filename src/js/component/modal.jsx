@@ -13,13 +13,12 @@ const MyModal = () => {
     <>
       <Button
         variant="inherit"
-        className="position-absolute top-0 end-0 m-4"
         onClick={handleShow}
       >
         <FontAwesomeIcon
           icon={faShoppingCart}
-          size="2xl"
-          style={{ color: "#000000" }}
+          size="xl"
+          style={{ color: "#FFFFFF" }}
         />
         
       </Button>

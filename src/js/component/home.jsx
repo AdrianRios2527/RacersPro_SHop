@@ -1,5 +1,5 @@
 import React from "react";
-import MyModal from "./modal";
+
 
 import { Header } from "./header";
 
@@ -8,7 +8,7 @@ import { Header } from "./header";
 const Home = () => {
 	return (
 		<div className="container-fluid  ">
-			<MyModal/>
+
 			<Header/>
 			
 		</div>
