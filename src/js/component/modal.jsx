@@ -5,34 +5,29 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 const MyModal = () => {
   const [show, setShow] = useState(false);
+  const [welcomeText, setWelcomeText] = useState("Bienvenido");
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const handleShow = () => {
+    setShow(true);
+    setWelcomeText("Bienvenido"); // Puedes cambiar el texto aquí según tus necesidades
+  };
 
   return (
     <>
-      <Button
-        variant="inherit"
-        onClick={handleShow}
-      >
-        <FontAwesomeIcon
-          icon={faShoppingCart}
-          size="xl"
-          style={{ color: "#FFFFFF" }}
-        />
-        
+      <Button variant="inherit" onClick={handleShow}>
+        <FontAwesomeIcon icon={faShoppingCart} size="xl" style={{ color: "#FFFFFF" }} />
       </Button>
 
       <Modal show={show} onHide={handleClose} centered>
         <Modal.Header closeButton>
-          <Modal.Title>Mi Modal</Modal.Title>
+          <Modal.Title style={{ color: "black" }}>Mi Modal</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Contenido del modal...</Modal.Body>
+        <Modal.Body style={{ color: "black" }}>{welcomeText}</Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
             Cerrar
           </Button>
-          <Button variant="primary">Guardar cambios</Button>
         </Modal.Footer>
       </Modal>
     </>
