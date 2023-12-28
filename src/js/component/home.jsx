@@ -2,7 +2,6 @@ import React from "react";
 
 
 import { Header } from "./header";
-import { Container } from "./container";
 
 
 //create your first component
@@ -10,7 +9,7 @@ const Home = () => {
 	return (
 		<div className="container-fluid  ">
 			<Header/>
-			<Container/>
+		
 		</div>
 	);
 };
