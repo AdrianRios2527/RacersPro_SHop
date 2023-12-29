@@ -56,7 +56,7 @@ export const Cards = (props) => {
         <p className="card-text flex-grow-1 mt-2">{props.texts}</p>
         <div className="d-flex">
           <button className={buttonClass} onClick={handleButtonClick}>
-            {buttonText} <br />{props.price}
+            {buttonText} <br /> ${props.price}
           </button>
          
         </div>
