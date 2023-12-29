@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShoppingBag } from '@fortawesome/free-solid-svg-icons';
 
 export const AllProducts = () => {
-  const [activeTab, setActiveTab] = useState(null);
+  const [activeTab, setActiveTab] = useState("motorbikes");
   const [selectedProducts, setSelectedProducts] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -15,6 +15,11 @@ export const AllProducts = () => {
   const handleButtonClick = (product) => {
     setTotalPrice((prevTotal) => prevTotal + product.price);
     setSelectedProducts((prevProducts) => [...prevProducts, product.title]);
+  };
+
+  const resetCart = () => {
+    setTotalPrice(0);
+    setSelectedProducts([]);
   };
 
   return (
@@ -61,6 +66,9 @@ export const AllProducts = () => {
                       <li key={index}>{productName}</li>
                     ))}
                   </ul>
+                  <button type="button" className="btn btn-danger" onClick={resetCart}>
+                  Vaciar carrito
+                </button>
 
                 </div>
               </div>
@@ -75,30 +83,30 @@ export const AllProducts = () => {
             key="z H2 SE"
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/23MY_Z_H2_SE_GY2_STU__3_.png"
             title="Z H2 SE"
-            price={14909}
+            price={14.909}
             texts="Y así es como comprobamos que la Z H2 acelera como un demonio y es capaz de llegar a los 265 km/h en quinta"
             onButtonClick={() => handleButtonClick({
               title: "Z H2 SE",
-              price: 14909
+              price: 14.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/22MY_Versys%20650_GN1_STU%20(1).001.png"
             title="VERSYS 650 2023"
-            price={28909}
+            price={28.909}
             texts="La Versys 650 se ha diseñado con esta insólita combinación de suspensión de largo recorrido, llantas deportivas"
 
             onButtonClick={() => handleButtonClick({
               title: "VERSYS 650 2023",
-              price: 28909
+              price: 28.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_W800__BK1_STU__2_.png"
             title="W800 2024"
-            price={10909}
+            price={10.909}
             texts="W800, el último miembro de una dinastía de 50 años de Kawasaki W con una atención al detalle y
          un nivel de ingeniería artesanal que pocas máquinas poseen. Desde su facilidad de
          conducción hasta su evocador aspecto vintage, la W800 es la evolución del
@@ -106,63 +114,63 @@ export const AllProducts = () => {
 
             onButtonClick={() => handleButtonClick({
               title: "W800 2024",
-              price: 10909
+              price: 10.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_KX65_GN1_STU__2_.png"
             title="KX65 2024"
-            price={19909}
+            price={19.909}
             texts="Creadas para dominar y construidas para los ganadores, la KX65 y la KX85 son máquinas
          preparadas para la competición, diseñadas para estimular los brotes verdes del talento
          juvenil y permitir que florezcan en forma de victorias en carrera "
 
             onButtonClick={() => handleButtonClick({
               title: "KX65 2024",
-              price: 19909
+              price: 19.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_Ninja_650_GN1_STU__2_.png "
             title="Ninja 400cc"
-            price={19909}
+            price={19.909}
             texts="La moto deportiva Ninja® 400 ofrece la mayor cilindrada de la categoría, con 399cc, acompañada por la sofisticación de un motor bicilíndrico."
 
             onButtonClick={() => handleButtonClick({
               title: "Ninja 400cc",
-              price: 19909
+              price: 19.909
             })}
           />
           <Cards
             key="z H2 SE"
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/23MY_Z_H2_SE_GY2_STU__3_.png"
             title="Z H2 SE"
-            price={14909}
+            price={14.909}
             texts="Y así es como comprobamos que la Z H2 acelera como un demonio y es capaz de llegar a los 265 km/h en quinta"
             onButtonClick={() => handleButtonClick({
               title: "Z H2 SE",
-              price: 14909
+              price: 14.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/22MY_Versys%20650_GN1_STU%20(1).001.png"
             title="VERSYS 650 2023"
-            price={28909}
+            price={28.909}
             texts="La Versys 650 se ha diseñado con esta insólita combinación de suspensión de largo recorrido, llantas deportivas"
 
             onButtonClick={() => handleButtonClick({
               title: "VERSYS 650 2023",
-              price: 28909
+              price: 28.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_W800__BK1_STU__2_.png"
             title="W800 2024"
-            price={10909}
+            price={10.909}
             texts="W800, el último miembro de una dinastía de 50 años de Kawasaki W con una atención al detalle y
          un nivel de ingeniería artesanal que pocas máquinas poseen. Desde su facilidad de
          conducción hasta su evocador aspecto vintage, la W800 es la evolución del
@@ -170,37 +178,37 @@ export const AllProducts = () => {
 
             onButtonClick={() => handleButtonClick({
               title: "W800 2024",
-              price: 10909
+              price: 10.909
             })}
           />
           <Cards
             key="z H2 SE"
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/23MY_Z_H2_SE_GY2_STU__3_.png"
             title="Z H2 SE"
-            price={14909}
+            price={14.909}
             texts="Y así es como comprobamos que la Z H2 acelera como un demonio y es capaz de llegar a los 265 km/h en quinta"
             onButtonClick={() => handleButtonClick({
               title: "Z H2 SE",
-              price: 14909
+              price: 14.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/22MY_Versys%20650_GN1_STU%20(1).001.png"
             title="VERSYS 650 2023"
-            price={28909}
+            price={28.909}
             texts="La Versys 650 se ha diseñado con esta insólita combinación de suspensión de largo recorrido, llantas deportivas"
 
             onButtonClick={() => handleButtonClick({
               title: "VERSYS 650 2023",
-              price: 28909
+              price: 28.909
             })}
           />
 
           <Cards
             url="https://storage.kawasaki.eu/public/kawasaki.eu/en-EU/model/24MY_W800__BK1_STU__2_.png"
             title="W800 2024"
-            price={10909}
+            price={10.909}
             texts="W800, el último miembro de una dinastía de 50 años de Kawasaki W con una atención al detalle y
          un nivel de ingeniería artesanal que pocas máquinas poseen. Desde su facilidad de
          conducción hasta su evocador aspecto vintage, la W800 es la evolución del
@@ -208,7 +216,7 @@ export const AllProducts = () => {
 
             onButtonClick={() => handleButtonClick({
               title: "W800 2024",
-              price: 10909
+              price: 10.909
             })}
           />
         </div>
@@ -232,13 +240,13 @@ export const AllProducts = () => {
           <Cards
             url="https://www.motosgarrido.com/52032-large_default/casco-agv-pista-gp-rr-ece-2206-dot-limited-edition-valentino-rossi-assen-2007-blanco-azul-amarillo-fluor-rosa.jpg"
             title=" AGV PISTA GP RR ECE 2206 DOT LIMITED"
-            price={1000}
+            price={1.000}
             texts="El Pista GP RR es la réplica perfecta del casco de AGV utilizado durante las carreras por los campeones del mundial de motociclismo. Por eso ha recibido la nueva homologación FIM, que certifica el mayor nivel de protección posible, incluso de las peligrosas aceleraciones rotacionales de la cabeza."
 
 
             onButtonClick={() => handleButtonClick({
               title: " AGV PISTA GP RR ECE 2206 DOT LIMITED",
-              price: 1000
+              price: 1.000
             })}
           />
 
@@ -304,13 +312,13 @@ export const AllProducts = () => {
           <Cards
             url="https://www.motosgarrido.com/52032-large_default/casco-agv-pista-gp-rr-ece-2206-dot-limited-edition-valentino-rossi-assen-2007-blanco-azul-amarillo-fluor-rosa.jpg"
             title=" AGV PISTA GP RR ECE 2206 DOT LIMITED"
-            price={1000}
+            price={1.000}
             texts="El Pista GP RR es la réplica perfecta del casco de AGV utilizado durante las carreras por los campeones del mundial de motociclismo. Por eso ha recibido la nueva homologación FIM, que certifica el mayor nivel de protección posible, incluso de las peligrosas aceleraciones rotacionales de la cabeza."
 
 
             onButtonClick={() => handleButtonClick({
               title: " AGV PISTA GP RR ECE 2206 DOT LIMITED",
-              price: 1000
+              price: 1.000
             })}
           />
 

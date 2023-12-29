@@ -3,6 +3,8 @@ import React from "react";
 export const Cards = (props) => {
   const sumadorCompra = () => {
     props.onButtonClick(props.price);
+    // Display an alert when the button is clicked
+    window.alert(`¡${props.title} ha sido agregado al carrito!`);
   };
 
   return (

@@ -11,11 +11,13 @@ const Home = () => {
 
 	return (
 		<div className="container-fluid  ">
+		
+			
 
 			<Header />
 
 			<AllProducts/>
-
+		
 			<Footer/>
 		</div>
 	);
